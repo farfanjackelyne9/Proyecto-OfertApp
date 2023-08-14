@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".LoginActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:translationY="50dp"
+                app:layout_constraintBottom_toTopOf="@+id/tvHola"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.475"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.673"
+                app:srcCompat="@mipmap/splashofertapp"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/tvHola"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="100dp"
+                android:text="Hola"
+                android:textColor="#36455A"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.164"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiUsuario"
+                    android:layout_width="330dp"
+                    android:layout_height="60dp"
+
+                    app:boxBackgroundMode="filled"
+                    app:boxStrokeColor="#2DDA93"
+                    app:hintTextColor="#2DDA93"
+                    android:layout_gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.175"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHola"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/login_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:hint="Email"
+                        android:padding="8dp"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="#6A6F7D"
+                        android:textColorHighlight="#CFCFCF"
+                        android:textColorHint="#6A6F7D"
+                        android:textColorLink="#2DDA93"
+                        android:textSize="18sp"
+                        tools:ignore="TextContrastCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tiContraseña"
+                    android:layout_width="330dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:background="#FFFFFF"
+                    app:boxBackgroundMode="filled"
+                    app:boxStrokeColor="#2DDA93"
+                    app:hintTextColor="#2DDA93"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.172"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tiUsuario">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/login_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:hint="Contraseña"
+                        android:inputType="textPassword"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="#6A6F7D"
+                        android:textColorHint="#6A6F7D"
+                        android:textColorLink="#2DDA93"
+                        android:textSize="18sp"
+                        tools:ignore="TextContrastCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/cbRecordarDatos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="20dp"
+                    android:buttonTint="#2DDA93"
+                    android:buttonTintMode="multiply"
+                    android:checked="false"
+                    android:selectAllOnFocus="false"
+                    android:text="Recordar datos"
+                    android:textColor="#939393"
+                    android:textSize="16sp"
+                    android:translationX="25dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tiContraseña"
+                    app:useMaterialThemeColors="false" />
+
+
+                <Button
+                    android:id="@+id/btnOlvideContra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:clickable="false"
+                    android:includeFontPadding="false"
+                    android:linksClickable="true"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="Olvide mi contraseña"
+                    android:textColor="#2DDA93"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:translationX="-25dp"
+                    android:translationY="-68dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.216"
+                    app:layout_constraintStart_toEndOf="@+id/cbRecordarDatos"
+                    app:layout_constraintTop_toBottomOf="@+id/tiContraseña" />
+
+                <Button
+                    android:id="@+id/login_button"
+                    android:layout_width="340dp"
+                    android:layout_height="60dp"
+
+                    android:layout_gravity="center"
+                    android:backgroundTint="#2DDA93"
+                    android:text="Ingresar"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="18sp"
+                    app:cornerRadius="3sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.427"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tiContraseña" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="16dp"
+                    android:text="¿No tienes cuenta?"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
+
+                <Button
+                    android:id="@+id/singupRedirectText"
+                    android:layout_width="97dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="70dp"
+                    android:background="#00FFFFFF"
+                    android:clickable="false"
+                    android:linksClickable="true"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="Registrate"
+                    android:textColor="#2DDA93"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:translationY="-35dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

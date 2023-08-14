@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".SingUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvRegistrate"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:includeFontPadding="false"
+            android:text="Registrate"
+            android:textColor="#36455A "
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <TextView
+            android:id="@+id/tvMsjBienvenida"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="44dp"
+            android:textSize="18sp"
+            android:text="Forma parte de una gran comunidad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRegistrate"
+            tools:ignore="TextSizeCheck" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiCorreo"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeColor="#2DDA93"
+                app:hintTextColor="#2DDA93"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.175"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tiCelular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/singup_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:hint="Email"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="#6A6F7D"
+                    android:textSize="18sp"
+                    android:textColorHighlight="#22A16D"
+                    android:textColorHint="#6A6F7D"
+                    android:textColorLink="#2DDA93"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiContraseña"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeColor="#2DDA93"
+                app:hintTextColor="#2DDA93"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.172"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMsjBienvenida2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/singup_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:textSize="18sp"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="2dp"
+                    tools:ignore="TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiConfirmarContraseña"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeColor="#2DDA93"
+                app:hintTextColor="#2DDA93"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.172"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tiContraseña">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/singup_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:textSize="18sp"
+                    android:hint="Confirmar Contraseña"
+                    android:inputType="textPassword"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="2dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/sinup_button"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="28dp"
+                android:layout_gravity="center"
+                android:allowUndo="false"
+                android:backgroundTint="#2DDA93"
+                android:checkable="false"
+                android:contextClickable="false"
+                android:defaultFocusHighlightEnabled="false"
+                android:focusableInTouchMode="false"
+                android:text="Registrarse"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                app:cornerRadius="3dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tiConfirmarContraseña"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="16dp"
+                android:text="¿Ya tienes cuenta?"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
+
+            <Button
+                android:id="@+id/loginRedirectText"
+                android:layout_width="97dp"
+                android:layout_height="36dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="65dp"
+                android:background="#00FFFFFF"
+                android:clickable="false"
+                android:linksClickable="true"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:text="Ingresar"
+                android:textColor="#2DDA93"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:translationY="-35dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

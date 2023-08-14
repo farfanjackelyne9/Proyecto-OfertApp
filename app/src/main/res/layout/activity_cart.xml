@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#2DDA93"
+        android:orientation="horizontal"
+        android:weightSum="16">
+
+
+        <TextView
+            android:id="@+id/textCompras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="13"
+            android:layout_marginLeft="20dp"
+            android:gravity="start"
+            android:text="Mis Compras"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_weight="2"
+            android:src="@drawable/clear_24" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/panel"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total a Pagar:"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="#36455A"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="TOTAL"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#36455A"/>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclercart"
+        android:layout_width="match_parent"
+        android:layout_height="837dp"
+        android:layout_below="@+id/total"
+        android:padding="8dp"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/buttonPagar"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="680dp"
+        android:clickable="true"
+        android:contentDescription="Pagando"
+        android:minHeight="48dp"
+        android:text="PAGAR"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:textStyle="bold"
+
+        app:backgroundTint="#2DDA93" />
+
+
+</RelativeLayout>
